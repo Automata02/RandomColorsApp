@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		6C7802E3290A6C6500887940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7802E2290A6C6500887940 /* AppDelegate.swift */; };
 		6C7802E5290A6C6500887940 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7802E4290A6C6500887940 /* SceneDelegate.swift */; };
-		6C7802E7290A6C6500887940 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7802E6290A6C6500887940 /* ViewController.swift */; };
 		6C7802EA290A6C6500887940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7802E8290A6C6500887940 /* Main.storyboard */; };
 		6C7802EC290A6C6800887940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C7802EB290A6C6800887940 /* Assets.xcassets */; };
 		6C7802EF290A6C6800887940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7802ED290A6C6800887940 /* LaunchScreen.storyboard */; };
+		6C7802F7290A6D1F00887940 /* ColorsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7802F6290A6D1F00887940 /* ColorsCollectionVC.swift */; };
+		6C7802F9290A6F0900887940 /* ColorsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7802F8290A6F0900887940 /* ColorsDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C7802DF290A6C6500887940 /* RandomColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7802E2290A6C6500887940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C7802E4290A6C6500887940 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C7802E6290A6C6500887940 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C7802E9290A6C6500887940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C7802EB290A6C6800887940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C7802EE290A6C6800887940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C7802F0290A6C6800887940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C7802F6290A6D1F00887940 /* ColorsCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCollectionVC.swift; sourceTree = "<group>"; };
+		6C7802F8290A6F0900887940 /* ColorsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				6C7802E2290A6C6500887940 /* AppDelegate.swift */,
 				6C7802E4290A6C6500887940 /* SceneDelegate.swift */,
-				6C7802E6290A6C6500887940 /* ViewController.swift */,
+				6C7802F6290A6D1F00887940 /* ColorsCollectionVC.swift */,
+				6C7802F8290A6F0900887940 /* ColorsDetailVC.swift */,
 				6C7802E8290A6C6500887940 /* Main.storyboard */,
 				6C7802EB290A6C6800887940 /* Assets.xcassets */,
 				6C7802ED290A6C6800887940 /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C7802E7290A6C6500887940 /* ViewController.swift in Sources */,
 				6C7802E3290A6C6500887940 /* AppDelegate.swift in Sources */,
+				6C7802F9290A6F0900887940 /* ColorsDetailVC.swift in Sources */,
+				6C7802F7290A6D1F00887940 /* ColorsCollectionVC.swift in Sources */,
 				6C7802E5290A6C6500887940 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
