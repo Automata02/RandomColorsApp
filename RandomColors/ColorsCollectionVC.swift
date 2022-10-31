@@ -10,24 +10,36 @@ import UIKit
 class ColorsCollectionVC: UIViewController {
     
     var colors: [UIColor] = []
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    enum Cells {
+        static let colorCell = "myCell"
+    }
+    
+    enum Segues {
+        static let toDetail = "ToColorsDetailVC"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         appendRandomColors()
     }
     
+    @IBAction func refreshColorsTapped(_ sender: Any) {
+        colors.removeAll()
+        appendRandomColors()
+        collectionView.reloadData()
+    }
+    
     func appendRandomColors() {
-        for _ in 0..<10000 {
-            colors.append(createRandomColor())
+        for _ in 0..<420 {
+            colors.append(.randomize())
         }
     }
     
-    func createRandomColor() -> UIColor {
-        let randomColor = UIColor(red: CGFloat.random(in: 0...1),
-                                  green: CGFloat.random(in: 0...1),
-                                  blue: CGFloat.random(in: 0...1),
-                                  alpha: 1)
-        return randomColor
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! ColorsDetailVC
+        destVC.color = sender as? UIColor
     }
 }
 
@@ -39,14 +51,15 @@ extension ColorsCollectionVC: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cells.colorCell, for: indexPath)
         let color = colors[indexPath.row]
         cell.backgroundColor = color
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ToColorsDetailVC", sender: nil)
+        let color = colors[indexPath.row]
+        performSegue(withIdentifier: Segues.toDetail, sender: color)
     }
     
 }

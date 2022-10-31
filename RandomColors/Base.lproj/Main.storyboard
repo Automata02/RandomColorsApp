@@ -51,8 +51,16 @@
                             <constraint firstItem="eUd-ce-Lde" firstAttribute="top" secondItem="Zqx-DH-ibE" secondAttribute="top" id="lJF-2B-Jy6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Colors" id="k8t-5k-aZy"/>
+                    <navigationItem key="navigationItem" title="Colors" id="k8t-5k-aZy">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.counterclockwise" catalog="system" id="diX-fp-i4c">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="refreshColorsTapped:" destination="ubb-1b-WgW" id="9Ux-tw-l6A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="eUd-ce-Lde" id="hVJ-Rl-x1B"/>
                         <segue destination="CVT-qf-fdN" kind="show" identifier="ToColorsDetailVC" id="9hJ-7h-Yat"/>
                     </connections>
                 </viewController>
@@ -67,10 +75,25 @@
                     <view key="view" contentMode="scaleToFill" id="rrA-e3-1UT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEN-yN-P9X">
+                                <rect key="frame" x="174" y="411.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dnY-uV-qkK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iEN-yN-P9X" firstAttribute="centerY" secondItem="rrA-e3-1UT" secondAttribute="centerY" id="4km-od-6oX"/>
+                            <constraint firstItem="iEN-yN-P9X" firstAttribute="centerX" secondItem="rrA-e3-1UT" secondAttribute="centerX" id="6su-zw-60D"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3im-Jq-Lyk"/>
+                    <connections>
+                        <outlet property="colorLabel" destination="iEN-yN-P9X" id="m3z-Fd-SNv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qh-py-b40" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,6 +119,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
